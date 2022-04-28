@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   }
 
   loadapi(): Observable<ProductSchema[]> {
-    return this.httpclient.get<ProductSchema[]>('http://demo7447528.mockable.io/product')
+    return this.httpclient.get<ProductSchema[]>('https://demo7447528.mockable.io/product')
   }
   checkIfPresent(id: number, point: number) {
     if (this.redeemdata.some(data => data.id == id && data.points == point)) {
