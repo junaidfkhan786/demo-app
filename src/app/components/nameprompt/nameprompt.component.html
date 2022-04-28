@@ -1,0 +1,14 @@
+<div class="p-4 text-center">
+    <div>
+        NAME
+    </div>
+    <mat-form-field appearance="outline">
+        <input matInput [formControl]="name" required>
+        <mat-error *ngIf="name.hasError('required')">Name Is Required</mat-error>
+    </mat-form-field>
+    <div>
+        <button color="primary" (click)="dialogref.close({name:name.value,points:500})" [disabled]="name.invalid"
+            mat-raised-button>Submit</button>
+
+    </div>
+</div>
